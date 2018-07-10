@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  host: <%= ENV['DATABASE_HOST'] || "localhost" %>
+  username: <%= ENV['DATABASE_USERNAME'] || 'postgres' %>
+  username: <%= ENV['DATABASE_PASSWORD'] || '' %>
+
+development:
+  <<: *default
+  database: db/referral_linker_dev
+
+test:
+  <<: *default
+  database: db/referral_linker_test
+
+production:
+  <<: *default
+  database: db/referral_linker_prod
