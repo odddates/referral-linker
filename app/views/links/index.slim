@@ -1,0 +1,9 @@
+- unless @new_link.errors.messages.values.empty?
+  span = "Your link #{@new_link.errors.messages.values.join(', ')}"
+
+= form_for @new_link do |f|
+  = f.text_field :id
+  = f.submit
+
+- @links.each do |link|
+  div= link.id

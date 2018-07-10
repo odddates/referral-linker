@@ -1,4 +1,4 @@
-# README
+# Referral Linker
 
 *Note*: You'll need postgres running for this app. If you're using MacOS, I recommend Postgres.app
 
