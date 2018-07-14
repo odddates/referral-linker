@@ -1,0 +1,53 @@
+a {
+  text-decoration: none;
+  color: $primary;
+}
+
+.btn {
+  font-size: 16px;
+  color: $white;
+  border-radius: $border-radius;
+  padding: 8px 11px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all .15s ease;
+
+  &.btn-primary {
+    background: $primary;
+  }
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-input {
+  font: 400 14px 'Montserrat', sans-serif;
+  padding: 7px;
+  border-radius: $border-radius;
+  border: $border;
+}
+
+.table {
+  margin: auto;
+  margin-top: 20px;
+  border-collapse: collapse;
+  border: $border;
+
+  th {
+    padding: 10px 20px;
+    border: $border;
+    background-color: $light-gray;
+  }
+
+  td {
+    padding: 5px;
+    border: $border;
+
+    &.center {
+      text-align: center;
+    }
+  }
+}

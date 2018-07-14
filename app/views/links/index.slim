@@ -14,6 +14,6 @@ table.table
     - @links.each do |link|
       tr
         td= link_to link.title, link_path(link.title)
-        td= link.views
-        td= link_to 'Edit', edit_link_path(link)
-        td= link_to 'Delete', link_path(link), data: { confirm: 'Are you sure?' }, method: :delete
+        td.center= link.views
+        td.center= link_to 'Edit', edit_link_path(link)
+        td.center= link_to 'Delete', link_path(link), data: { confirm: 'Are you sure?' }, method: :delete

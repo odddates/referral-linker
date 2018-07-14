@@ -1,53 +1,49 @@
-$bg: #233040;
-$primary: #428BCA;
-$white: #FFFFFF;
-
-.page {
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  background-color: $white;
-  padding: 20px;
-}
-
-.btn {
-  font-size: 16px;
-  color: $white;
-  border-radius: 3px;
-  padding: 8px 11px;
-  font-weight: 600;
-  display: inline-block;
-  transition: all .15s ease;
-
-  &.btn-primary {
-    background: $primary;
-  }
-}
-
-.flex-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.text-input {
-  font: 400 14px 'Montserrat', sans-serif;
-  padding: 7px;
-}
-
-.table {
-  margin: auto;
-  margin-top: 10px;
-  border-collapse: collapse;
-
-  th {
-    padding: 10px 20px;
-    border: 1px solid black;
-  }
+html {
+  height: 100%;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #233040;
+  background-color: $dark-bg;
   margin: 0;
+  height: 100%;
+}
+
+.page {
+  width: 50%;
+  margin: auto;
+  background-color: $light-bg;
+  padding: 20px;
+  height: 100%;
+}
+
+.header {
+  margin: auto;
+  padding: 10px 20px;
+  width: 50%;
+  background-color: $primary;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  display: inline-block;
+  position: relative;
+  background-image: url(/assets/logo.png);
+  background-size: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 48px;
+  width: 48px;
+  left: -7px;
+}
+
+.logo-name {
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
 }

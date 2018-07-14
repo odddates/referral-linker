@@ -1,7 +1,7 @@
 = form_for link do |f|
   .flex-row
     = f.text_field :title, class: 'text-input'
-    = f.submit 'Add', class: 'btn btn-primary'
+    = f.submit link.new_record? ? 'Add' : 'Update', class: 'btn btn-primary'
 
 - unless link.errors.messages.values.join(', ').empty?
   span = "Your link #{link.errors.messages.values.join(', ')}"

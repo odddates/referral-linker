@@ -8,5 +8,9 @@ html
     link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"
 
   body
+    .header
+      = link_to '/', class: 'logo'
+        .logo-image
+        .logo-name Referral Linker
     .page
       = yield
