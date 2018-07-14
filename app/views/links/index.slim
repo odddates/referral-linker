@@ -1,9 +1,19 @@
-- unless @new_link.errors.messages.values.empty?
-  span = "Your link #{@new_link.errors.messages.values.join(', ')}"
+= render partial: 'form', locals: { link: @new_link }
 
-= form_for @new_link do |f|
-  = f.text_field :id
-  = f.submit
-
-- @links.each do |link|
-  div= link.id
+table.table
+  thead
+    tr
+      th Link Title
+      th Clicks
+      th Edit
+      th Delete
+  tbody
+  - if @links.empty?
+    div There are currently no links.
+  - else
+    - @links.each do |link|
+      tr
+        td= link_to link.title, link_path(link.title)
+        td= link.views
+        td= link_to 'Edit', edit_link_path(link)
+        td= link_to 'Delete', link_path(link), data: { confirm: 'Are you sure?' }, method: :delete

@@ -1,4 +1,53 @@
+$bg: #233040;
+$primary: #428BCA;
+$white: #FFFFFF;
+
 .page {
   width: 50%;
-  background-color: light-gray;
+  margin: auto;
+  text-align: center;
+  background-color: $white;
+  padding: 20px;
+}
+
+.btn {
+  font-size: 16px;
+  color: $white;
+  border-radius: 3px;
+  padding: 8px 11px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all .15s ease;
+
+  &.btn-primary {
+    background: $primary;
+  }
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-input {
+  font: 400 14px 'Montserrat', sans-serif;
+  padding: 7px;
+}
+
+.table {
+  margin: auto;
+  margin-top: 10px;
+  border-collapse: collapse;
+
+  th {
+    padding: 10px 20px;
+    border: 1px solid black;
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #233040;
+  margin: 0;
 }

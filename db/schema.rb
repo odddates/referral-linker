@@ -15,7 +15,9 @@ ActiveRecord::Schema.define(version: 20180710032832) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "links", id: false, force: :cascade do |t|
-    t.string "id", null: false
+  create_table "links", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "views", default: 0, null: false
   end
+
 end

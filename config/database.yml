@@ -8,12 +8,12 @@ default: &default
 
 development:
   <<: *default
-  database: db/referral_linker_dev
+  database: referral_linker_dev
 
 test:
   <<: *default
-  database: db/referral_linker_test
+  database: referral_linker_test
 
 production:
   <<: *default
-  database: db/referral_linker_prod
+  database: referral_linker_prod

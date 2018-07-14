@@ -15,9 +15,43 @@ class LinksController < ApplicationController
     end
   end
 
+  def show
+    link = Link.find_by(title: params[:id])
+    link.update!(views: link.views + 1)
+
+    redirect_to landing_links_path(link: link.title)
+  end
+
+  def edit
+    @link = Link.find(params[:id])
+  end
+
+  def update
+    @link = Link.find(params[:id])
+
+    if @link.update(link_params)
+      redirect_to :links
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @link = Link.find(params[:id])
+
+    if @link.destroy
+      redirect_to :links
+    else
+      #display error
+    end
+  end
+
+  def landing
+  end
+
   private
 
   def link_params
-    params.require(:link).permit(:id)
+    params.require(:link).permit(:title)
   end
 end
