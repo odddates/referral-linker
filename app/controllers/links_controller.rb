@@ -1,7 +1,7 @@
 class LinksController < ApplicationController
   def index
     @new_link = Link.new
-    @links = Link.all
+    @links = Link.all.order('views DESC')
   end
 
   def create
@@ -10,7 +10,7 @@ class LinksController < ApplicationController
     if @new_link.save
       redirect_to :links
     else
-      @links = Link.all
+      @links = Link.all.order('views DESC')
       render :index
     end
   end

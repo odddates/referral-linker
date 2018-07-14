@@ -4,4 +4,4 @@
     = f.submit link.new_record? ? 'Add' : 'Update', class: 'btn btn-primary'
 
 - unless link.errors.messages.values.join(', ').empty?
-  span = "Your link #{link.errors.messages.values.join(', ')}"
+  .errors= "Your link #{link.errors.messages.values.join(', ')}"
