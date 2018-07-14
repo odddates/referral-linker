@@ -38,15 +38,12 @@ class LinksController < ApplicationController
 
   def destroy
     @link = Link.find(params[:id])
-
-    if @link.destroy
-      redirect_to :links
-    else
-      #display error
-    end
+    @link.destroy!
+    redirect_to :links
   end
 
   def landing
+    @referrer = params[:link]
   end
 
   private
