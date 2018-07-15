@@ -1,19 +1,19 @@
 = render partial: 'form', locals: { link: @new_link }
 
-table.table
-  thead
-    tr
-      th Link Title
-      th Clicks
-      th Edit
-      th Delete
-  tbody
-  - if @links.empty?
-    div There are currently no links.
-  - else
-    - @links.each do |link|
+- if @links.length > 0
+  table.table
+    thead
       tr
-        td= link_to link.title, link_path(link.title)
-        td.center= link.views
-        td.center= link_to 'Edit', edit_link_path(link)
-        td.center= link_to 'Delete', link_path(link), data: { confirm: 'Are you sure?' }, method: :delete
+        th Link Title
+        th Clicks
+        th Edit
+        th Delete
+    tbody
+      - @links.each do |link|
+        tr
+          td= link_to link.title, link_path(link.title)
+          td.center= link.views
+          td.center= link_to 'Edit', edit_link_path(link)
+          td.center= link_to 'Delete', link_path(link), data: { confirm: 'Are you sure?' }, method: :delete
+- else
+  .empty-message There are currently no links. You can add one with the field above.
