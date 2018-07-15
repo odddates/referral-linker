@@ -12,17 +12,17 @@ To run:
 
 # Challenge Info
 
-Approach: Fullstack
+**Approach**: Fullstack
 
-Problem Description:
+**Problem Description**:
 
 Provides a very simple referral link system that redirects users to a landing page. I solve this by having a link model with a title. When the user visits a URL on the site matching a link's title, they are redirected and the link's count is incremented.
 
-Technical Choices:
+**Technical Choices**:
 
 I chose Rails because it's what I'm most familiar with and allowed me to move quickly even though it's a little overkill for an app this size. I chose vanilla JS because the project is simple, though there are a variety of UI improvements that could be made using React (i.e. table sorting and editing links in the table instead of a separate page). I chose Slim templating because it speeds up development with its friendly syntax. I chose SASS because it just makes CSS development more flexible. I chose RSpec because it's the testing framework I'm most familiar with.
 
-Technical Tradeoffs:
+**Technical Tradeoffs**:
 
 Given more time I would have:
  - Made the website responsive.
@@ -31,4 +31,10 @@ Given more time I would have:
  - Figured out how to make the primary key of the link a string to enable semantics like '/linkname/edit' as opposed to '/1/edit'.
  - Handled links that don't exist yet.
 
-Hosted Link: tbd
+**Hosted Link**: [https://infinite-wildwood-15270.herokuapp.com/](https://infinite-wildwood-15270.herokuapp.com/)
+
+**Other Projects**:
+
+[jeremydye.fyi/portfolio](http://jeremydye.fyi/portfolio)
+
+You can check out my portfolio for some personal projects I've done.
